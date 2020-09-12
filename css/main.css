@@ -97,38 +97,48 @@ textarea {
 
 
 html {
-  background-color: #fff;
-  height: 100%;
+    background-color: #fff;
+    height: 100%;
 }
 
 body {
-  font-family: 'Kalam', cursive;
-  letter-spacing: 1px;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
+    font-family: 'Kalam', cursive;
+    letter-spacing: 1px;
+    padding: 2em;
+    font-size: 16px;
+    height: 100%;
+	background-color: #f16059;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-  
-	font-weight: 700;
+    align-items: baseline;
+    display: flex;
+	flex-flow: row wrap;
+    justify-content: space-between;    
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  align-items: center;
+    align-items: baseline;
 	color: #fff;
-	display: flex;
-	justify-content: center;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-	width: 30%;
+    display: flex;
+	font-weight: 300;
+	height: auto;
+    justify-content: center;    
+    font-size: 1em;
+	line-height: 1.25em;
+    background-color: #f16059;    
+	padding: 1%;
+}
+
+.m-widget-border {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;	
+}
+
+.special-symbol {
+    color: #FFBFC9;
 }
 
 
@@ -206,6 +216,36 @@ body {
 
 .clearfix:after {
     clear: both;
+}
+
+
+
+/* ----------- Tablets larger than 768px wide ----------- */
+@media (min-width: 768px) {
+	.div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+        font-size: 1.5em;
+    }
+	.m-widget-border {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        border-top: none;
+		border-bottom: none;
+	}
+}
+
+/* ----------- Monitors larger than 1200px wide ----------- */
+@media (min-width: 1200px) {
+    .div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+        font-size: 2em;
+	}
+	.m-widget-border {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+		border-top: none;
+		border-bottom: none;	
+    }
 }
 
 /* ==========================================================================
